@@ -1,17 +1,17 @@
-#Code for the paper
-# V. Garg, P. Giménez-Febrer, A. Pagès-Zamora, and I. Santamaria,
-#“Source enumeration via Toeplitz matrix completion,”
-#in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, May 2020.
+%Code for the paper
+% V. Garg, P. Giménez-Febrer, A. Pagès-Zamora, and I. Santamaria,
+%“Source enumeration via Toeplitz matrix completion,”
+%in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, May 2020.
 
-#Algorithm: Order Estimation using TMC
+%Algorithm: Order Estimation using TMC
 
-#Inputes:
-  #Rhat = The covariance Matrix (after applying Toeplitz Rectification)
-  # pmax, mu and alpha = As explained in the paper
-  # Unlike explained in the paper, using a while loop here to make the algorithm cost effective.
-  # The loop might stop before reaching the value pmax is some cases to save time
+%Inputes:
+  %Rhat = The covariance Matrix (after applying Toeplitz Rectification)
+  % pmax, mu and alpha = As explained in the paper
+  % Unlike explained in the paper, using a while loop here to make the algorithm cost effective.
+  % The loop might stop before reaching the value pmax is some cases to save time
 
-#Output: Khat, the required rank/order
+%Output: Khat, the required rank/order
 
 %% change p and check norm of difference present and previous generated matrices
 

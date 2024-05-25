@@ -1,14 +1,14 @@
 function Rtoep = Toeplitz_rectification(Rhat);
 
-#Enforcing toeplitz structure in the matrix
+%Enforcing toeplitz structure in the matrix
 
-#Code used for the paper
-# V. Garg, P. Giménez-Febrer, A. Pagès-Zamora, and I. Santamaria,
-#“Source enumeration via Toeplitz matrix completion,”
-#in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, May 2020.
+%Code used for the paper
+% V. Garg, P. Giménez-Febrer, A. Pagès-Zamora, and I. Santamaria,
+%“Source enumeration via Toeplitz matrix completion,”
+%in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, May 2020.
 
-#Input: The given covariance matrix
-#Output: Covariance matrix with Toeplitz structure
+%Input: The given covariance matrix
+%Output: Covariance matrix with Toeplitz structure
 
 M = size(Rhat,1); %Number of elements in array
 

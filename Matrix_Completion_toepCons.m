@@ -1,16 +1,16 @@
 function Rmc = Matrix_Completion_toepCons(Rhat,p,mu,alpha)
 
-#Code for the paper
-# V. Garg, P. Giménez-Febrer, A. Pagès-Zamora, and I. Santamaria,
-#“Source enumeration via Toeplitz matrix completion,”
-#in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, May 2020.
+%Code for the paper
+% V. Garg, P. Giménez-Febrer, A. Pagès-Zamora, and I. Santamaria,
+%“Source enumeration via Toeplitz matrix completion,”
+%in IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, May 2020.
 
-#Matrix Completion algorithm with Toeplitz constraint
+%Matrix Completion algorithm with Toeplitz constraint
 
-#Inputs:
-#Rhat: Covariance Matrix
-#p: the rank of the matrix (low rank)
-#mu and alpha: regularization parametes described in the paper
+%Inputs:
+%Rhat: Covariance Matrix
+%p: the rank of the matrix (low rank)
+%mu and alpha: regularization parametes described in the paper
 
 
 M = size(Rhat,1); %Number of elements in array
@@ -36,7 +36,7 @@ W = rand(M,p);
   Ratio_old = Ratio;
   Rmc = W*W';
 
-#converge
+%converge
  Ratio = norm((Rmc-diag(diag(Rmc)))-(Rhat-diag(diag(Rhat))),'fro')/norm((Rhat-diag(diag(Rhat))),'fro');
   if abs(Ratio_old-Ratio)/Ratio_old < 1e-5 || itr > 100
       C = 0;
